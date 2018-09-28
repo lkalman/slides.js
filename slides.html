@@ -1,0 +1,46 @@
+<!doctype html>
+<!-- 
+-- This is a minimal demo of 'slides.js'.
+-->
+<html>
+<head>
+  <title>Demo</title>
+  <script src="slides.js"></script>
+</head>
+
+<body style="font-size: 200%; font-family: sans-serif;"
+      data-stepstyles="
+  [] transform: translate( 0vw, 0vh );
+  3>[] transition: transform 1s;
+  [2] transform: translate( -100vw, 0vh ); transition: transform 1s; 
+  [3] transform: translate( 0vw, -100vh ); transition: transform 1s;">
+  <div style="position: absolute; top: 0; left: 0; 
+              width: 100vw; height: 100vh;">
+    <center>
+      <h1>Title</h1>
+    </center>
+    <h3 data-stepstyles="
+      [] opacity: 0; 
+      [1-] opacity: 1; transition: opacity 1s;">
+      An element that fades in.
+    </h3>
+  </div>
+  <div style="position: absolute; top: 0; left: 100vw; 
+              width: 100vw; height: 100vh;">
+    <center>
+      <h2>Page 2</h2>
+    </center>
+  </div>
+  <div style="position: absolute; top: 100vh; left: 0; 
+              width: 100vw; height: 100vh;">
+    <center>
+      <h3>Last page.</h3>
+    </center>
+  </div>
+  <script>
+    // <!--
+    slides( document, window ).init();
+    // -->
+  </script>
+</body>
+</html>
